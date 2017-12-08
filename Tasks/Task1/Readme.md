@@ -1,7 +1,18 @@
+
+Assignment 2:
+
+Write a bash/python script that takes list of hostnames (comma separated) as an argument.
+
+This script, when executed, should connect to all the servers via. SSH (standard port) (assume password-less connectivity) and give a single prompt to the user.
+
+When the user executes a command on this prompt, the script should run the command on all connected servers and display the output.
+
+Make this as efficient as possible, code comments appreciated.
+
 Pre-requisites
 ---------------
 
-install python and pip
+install python 2.7.5 and pip
 
 Install Fabric as well pip install fabric
 
