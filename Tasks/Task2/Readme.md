@@ -1,20 +1,18 @@
-Pre-requisites
----------------
-install python and pip
+Docker
+------
 
-Install Fabric as well
-pip install fabric
+Docker container with 7081 port on host and 8080 on container
 
-fabric module will run by looking into fabfile.py
+for building the docker image run the command where you have Dockerfile 
 
-so create a fabfile.py as shown above
+docker build -t tomcat7 .
 
-then run the below command
+To get your Application in the container running run the below command 
 
-fab -H 10.25.84.10,15.25.84.11 -u ec2-user  -i /tmp/Raja.pem remote_ex
+docker run -it --name tomcat7 -p 7081:8080 -p 27017:27017 tomcat7
 
 
-here from the above command -H is for hostnames where we can specify as many as we can. and we can specify hostnames in file and send it to the above command as well
--u is for Instruction of the User to login and execurte
--i it will send the pem file path so that it can communicate to remote instances
+Here -i is for interactive and t is for terminal
+
+
 
